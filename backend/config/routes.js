@@ -1,4 +1,9 @@
 import userModel from "./Schema.js";
+import imageSchema from "./imageSchema.js";
+import multer from "multer";
+
+const storage = multer.memoryStorage();
+const upload = multer({storage: storage})
 
 export const getUser = async (req, res) => {
     try {
@@ -43,5 +48,21 @@ export const deleteUser = async (req, res) => {
     } catch (error) {
         console.log(error);
         res.json("Data gagal dihapus").status(500);
+    }
+};
+
+export const uploadImage = async (req, res) => {
+    try {
+        const image = new imageSchema({
+            fileName: req.file.originalname,
+            description: req.description,
+            contentType: req.contentType,
+            data: req.file.buffer
+        });
+        await image.save();
+        res.json('Data Image berhasil ditambahkan.').status(200);
+    } catch (error) {
+        console.log(error);
+        res.json({msg: "Data gagal ditambahkan", error: error}).status(500);
     }
 }

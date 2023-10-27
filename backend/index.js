@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import { getUser, createUser } from "./config/routes";
+import { getUser, createUser, deleteUser } from "./config/routes.js";
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.listen(5000, () => {
 }
 );
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-}
-);
+app.get("/", getUser);
+app.post('/add', createUser);
+app.get("/user", deleteUser);
+app.delete("/user/:username", deleteUser)

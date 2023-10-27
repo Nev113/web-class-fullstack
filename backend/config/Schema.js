@@ -7,4 +7,4 @@ const userModel = new mongoose.Schema({
     email: String,
     role: String
 });
-return mongoose.model("User", userModel);
+export default mongoose.model("User", userModel);

@@ -70,6 +70,7 @@ export const deleteUser = async (req, res) => {
 
 export const uploadImage = async (req, res) => {
     try {
+        if(req.file.mimetype === "image/png" || req.file.mimetype === "image/jpg" || req.file.mimetype === "image/jpeg"){
         const id = nanoid(10);
         const image = new imageSchema({
             idImage: id,
@@ -81,6 +82,9 @@ export const uploadImage = async (req, res) => {
         });
         await image.save();
         res.json({status: "success" ,msg:'Data Image berhasil ditambahkan.', data:{id}}).status(200);
+        } else {
+        return res.json({status: "fail", msg: "Data gagal ditambahkan", error: "Silahkan masukkan type file yang benar"});
+        }
     } catch (error) {
         console.log(error);
         res.json({status: "fail" ,msg: "Data gagal ditambahkan", error: error}).status(500);

@@ -6,14 +6,14 @@ export default function RUD(){
     async function handleDelete (id){
         const answer = window.confirm("Apakah Anda Yakin?")
         if (!answer) return window.location.href("/admin/rud")
-        const response = await axios.delete("http://localhost:5000/image/"+id);
+        const response = await axios.delete("https://web-class-fullstack.vercel.app/image/"+id);
         if (response.data.status == "success") return window.location.href = "/admin/rud";
         return console.log("gagal", response)
     }
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get("http://localhost:5000/image/");
+                const response = await axios.get("https://web-class-fullstack.vercel.app/image/");
                 setData(response.data);
             } catch (error) {
                 console.log(error)

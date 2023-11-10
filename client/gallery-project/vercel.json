@@ -1,0 +1,16 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/gallery",
+            "dest": "/gallery"
+        },
+        {
+            "src": "/admin",
+            "dest": "/admin"
+        }
+    ]
+}

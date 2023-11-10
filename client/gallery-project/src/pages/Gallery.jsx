@@ -13,7 +13,7 @@ function ImageGallery() {
   useEffect(() => {
     async function getImages() {
       try{
-        const response = await axios.get('http://localhost:5000/image');
+        const response = await axios.get('https://web-class-fullstack.vercel.app/image');
         setImages(response.data);
       } catch (err) {
         console.log(err);

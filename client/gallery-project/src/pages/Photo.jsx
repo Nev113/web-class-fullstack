@@ -14,7 +14,7 @@ export default function Photo(){
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get(`http://localhost:5000/image/${id.id}`);
+                const response = await axios.get(`https://web-class-fullstack.vercel.app/http://localhost:5000/image/${id.id}`);
                 setImage(response.data);
                 setUploadDate(response.data.data.uploadDate);
             } catch (error) {

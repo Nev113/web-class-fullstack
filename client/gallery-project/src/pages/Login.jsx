@@ -14,7 +14,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://web-class-fullstack.vercel.app/login", {
         username,
         password,
       });

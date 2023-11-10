@@ -20,7 +20,7 @@ export default function Add() {
         <div className='container m-5 container-add'>
         <h2 className='mb-4'>Adding Image</h2>
         <form onSubmit={handleSubmit}>
-            <input type="file" onChange={handleImageChange} />
+            <input type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleImageChange} />
             <button type="submit" className='btn btn-success'>Upload</button>
         </form>
         </div>

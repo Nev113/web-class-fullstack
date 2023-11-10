@@ -6,8 +6,8 @@ import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Photo from './pages/Photo';
 import Logout from './pages/Logout';
-import Add from './pages/admin-panel/Add';
-import RUD from './pages/admin-panel/RUD';
+import Add from './pages/Add';
+import RUD from './pages/RUD';
 
 function App() {
   return (

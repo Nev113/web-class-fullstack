@@ -1,4 +1,5 @@
 import "./Footer.css"
+import image from  "./image.jpeg"
 
 export default function Footer() {
     return (
@@ -9,7 +10,7 @@ export default function Footer() {
                 <a href="https://www.instagram.com/tenfour_smankedo/" className="link-icon"><i className="fa-brands fa-instagram icon"></i><h3 className="p-2 text-instagram">X-4 No Counter</h3></a>
             </div>
             <div className="image">
-                <img className="image-footer" src="https://picsum.photos/seed/picsum/600/200" alt="" />
+                <img className="image-footer" src={image} alt="" />
             </div>
             </div>
         </div>

@@ -1,16 +1,5 @@
 {
     "routes": [
-        {
-            "src": "/",
-            "dest": "/"
-        },
-        {
-            "src": "/gallery",
-            "dest": "/gallery"
-        },
-        {
-            "src": "/admin",
-            "dest": "/admin"
-        }
+        {"src": "/[^.]*", "dest": "/", "status": 200}
     ]
 }

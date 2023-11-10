@@ -13,7 +13,7 @@ export default function Add() {
         e.preventDefault();
         const formData = new FormData();
         formData.append('image', image);
-        const response = await axios.post('http://localhost:5000/image', formData);
+        const response = await axios.post('https://web-class-fullstack.vercel.app/image', formData);
         if (response.data.status == "success") return window.location.href = "/admin"
     }
     return (

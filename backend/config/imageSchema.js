@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 
 const imageSchema = new mongoose.Schema({
+    idImage: String,
     fileName: String,
-    description: String,
     contentType: String,
-    data: Buffer
+    data: Buffer,
+    uploadDate: String,
 });
 
 

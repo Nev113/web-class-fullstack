@@ -1,0 +1,10 @@
+.main-form{
+    width: 600px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.main-form > input, button {
+    margin: 10px;
+}

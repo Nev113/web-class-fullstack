@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import { getUser, createUser, deleteUser } from "./config/routes.js";
-
+import routers from "./config/routing.js";
 const app = express();
 
 mongoose.connect("mongodb+srv://nevosangkane:nevosangkane123@cluster0.awihbqj.mongodb.net/User?retryWrites=true&w=majority", {
@@ -27,7 +26,4 @@ app.listen(5000, () => {
 }
 );
 
-app.get("/", getUser);
-app.post('/add', createUser);
-app.get("/user", deleteUser);
-app.delete("/user/:username", deleteUser)
+app.use("/", routers)

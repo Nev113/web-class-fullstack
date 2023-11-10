@@ -21,7 +21,7 @@ db.once("open", () => {
 app.use(cors());
 app.use(express.json());
 
-app.listen(5000, () => {
+app.listen(9000, () => {
     console.log("Server started");
 }
 );

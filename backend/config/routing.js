@@ -15,6 +15,9 @@ router.put("/user/:username", updateUser),
 router.get("/image/:id", getImageById),
 router.delete("/image/:id", deleteImage),
 router.post("/login", loginUser),
+router.get('/hello',  (req, res) => {
+  res.json('hello world'); 
+}) 
 ]
 
 export default routers;

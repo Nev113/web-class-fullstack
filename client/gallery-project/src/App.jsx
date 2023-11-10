@@ -21,7 +21,7 @@ function App() {
       <Route path='/Photo/:id' element={<Photo />} />
       <Route path="/admin/logout" element={<Logout />} />
       <Route path='/admin/add' element={<Add />} />
-      <Route path='/admin/rud' element={<RUD />}></Route>
+      <Route path='/admin/rud' element={<RUD />} />
     </Routes>
     </BrowserRouter>
     </>

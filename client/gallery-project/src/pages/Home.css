@@ -145,6 +145,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .hr{
     margin-top: 200px;
     margin-left: -200px;
+    color: white;
+    opacity: 1;
 }
 
 .line-header{

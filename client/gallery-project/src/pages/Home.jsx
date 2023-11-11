@@ -42,7 +42,7 @@ export default function Home() {
             <div className="roadmap-radio-2-1"></div>
             </div>
             <div className="content-roadmap-1">
-                <div className="walkel-title-1">Bendahara <br /><span className="content-title">Jessica Anastasya - Ilma Amalia</span></div>
+                <div className="walkel-title-1">Bendahara <br /><span className="content-title">Maemunah - Ilma Amalia</span></div>
                 <div className="ketkel-title-1">Sekretaris <br /> <span className="content-tile">Alisyah Fitri - Cintia Bella</span></div>
             </div>
         </div>

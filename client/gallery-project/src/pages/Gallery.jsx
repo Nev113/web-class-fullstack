@@ -38,7 +38,7 @@ function ImageGallery() {
     <div className="main">
       <h1 className='main-text'>Gallery</h1>
       <div className="image-list">
-        {statusCode === 'loading' && <p className='info'>Loading...</p>}
+        {statusCode === 'loading' && <p className='info'>Loading... / Under Maintenance...</p>}
         {statusCode === 'error' && <p className='info'>Something went wrong...</p>}
         {statusCode === 'ready' && images.length === 0 && (
           <p className='info'>There are no images...</p>
